@@ -2726,6 +2726,34 @@ section:not(.hero){
 }
 </style>
 
+
+<style id="v85-remove-large-yellow-strips">
+/* Remove only the large decorative diagonal yellow slash artwork. */
+.hero .slashes,
+.hero .hero-slashes,
+.hero [class*="slash"],
+.hero [class*="stripes"]{
+  display:none !important;
+  visibility:hidden !important;
+}
+</style>
+
+
+<style id="v86-lower-dotted-strip">
+/* Move the existing yellow dotted deal-flow graphic substantially lower,
+   keeping it below the subject's neck/upper torso instead of across the face. */
+.hero .flow{
+  transform:translateY(145px) !important;
+  z-index:4 !important;
+  pointer-events:none !important;
+}
+@media (max-width:800px){
+  .hero .flow{
+    transform:translateY(105px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="cursor-dot"></div><div class="cursor-ring"></div><div class="cursor-label">View</div><div class="interactive-spotlight"></div>
@@ -2741,7 +2769,7 @@ section:not(.hero){
 </nav>
 <main id="top">
 <section class="hero">
-<div class="hero-grid"></div><div class="hero-vignette"></div><div class="hero-floor"></div><div class="slashes"></div>
+<div class="hero-grid"></div><div class="hero-vignette"></div><div class="hero-floor"></div>
 <div class="hero-note">Small start.<br/><span>Real results.</span><br/>Big impact.</div>
 <svg aria-hidden="true" class="flow" viewbox="0 0 700 150">
 <path d="M5 125 C95 125 115 85 180 102 S275 130 335 85 S420 72 485 82 S590 32 695 22"></path>
@@ -2791,7 +2819,7 @@ section:not(.hero){
 <div class="work-intro-right">
 <p>A look at some of the clients and projects I’ve worked on across retail, F&amp;B, technology, real estate, healthcare, finance, travel and more.</p>
 <button aria-expanded="false" class="project-open-btn" data-cursor="Explore" id="openProjects" type="button">
-<span>VIEW ALL 37 PROJECTS</span><span class="arrow">↗</span>
+<span>VIEW ALL PROJECTS</span><span class="arrow">↗</span>
 </button>
 </div>
 </div>
